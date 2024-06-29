@@ -57,8 +57,7 @@ export default function Contact({ color }) {
             <Heading fontSize={"3xl"}>Let's stay in touch!</Heading>
             <Text color={"gray.600"} fontSize={"xl"} px={4} textAlign={"left"}>
               I'm currently seeking opportunities in software engineering roles
-              where I can develop innovative software solutions. I am
-              particularly interested in working on AI/ML products. Please feel
+              where I can develop innovative software solutions. Please feel
               free to contact me if there are any available roles!
             </Text>
             <Text
