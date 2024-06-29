@@ -17,12 +17,17 @@ export default function Header({ color }) {
     const contactSection = document.querySelector("#contact");
     contactSection.scrollIntoView({ behavior: "smooth" });
   };
+
+  // LinkedIn: www.linkedin.com/in/philippe-yong/
+  // - GitHub: https://github.com/0901-herr
+  // - Email: philippeyong927@gmail.com
+
   const linkedin = () => {
     window.open(
-                `${profile.linkedin}`,
-                "_blank",
-                "noreferrer,noopener"
-              );
+      `https://www.linkedin.com/in/philippe-yong/`,
+      "_blank",
+      "noreferrer,noopener"
+    );
   };
   return (
     <>
@@ -65,7 +70,7 @@ export default function Header({ color }) {
             position={"relative"}
           >
             <Button
-              colorScheme={color}
+              colorScheme={"white"}
               bg={`${color}.400`}
               rounded={"full"}
               px={6}
@@ -84,7 +89,7 @@ export default function Header({ color }) {
             >
               Contact Me
             </Button>
-            <Box>
+            {/* <Box>
               <Icon
                 as={Arrow}
                 color={useColorModeValue("gray.800", "gray.300")}
@@ -103,7 +108,7 @@ export default function Header({ color }) {
               >
                 Click me!
               </Text>
-            </Box>
+            </Box> */}
           </Stack>
         </Stack>
       </Container>

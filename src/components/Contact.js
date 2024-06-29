@@ -14,14 +14,27 @@ import ProfileArray from "./ProfileArray";
 export default function Contact({ color }) {
   const profile = ProfileArray();
   const linkedin = () => {
-    window.open(`${profile.linkedin}`, "_blank", "noreferrer,noopener");
+    window.open(
+      "https://www.linkedin.com/in/philippe-yong/",
+      "_blank",
+      "noreferrer,noopener"
+    );
   };
   const github = () => {
-    window.open(`${profile.github}`, "_blank", "noreferrer,noopener");
+    window.open(
+      "https://github.com/0901-herr",
+      "_blank",
+      "noreferrer,noopener"
+    );
   };
   const email = () => {
-    window.open(`mailto:${profile.email}`, "_blank", "noreferrer,noopener");
+    window.open(
+      `mailto:philippeyong927@gmail.com`,
+      "_blank",
+      "noreferrer,noopener"
+    );
   };
+
   return (
     <>
       <Container maxW={"3xl"} id="contact">
@@ -42,11 +55,19 @@ export default function Contact({ color }) {
           </Stack>
           <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
             <Heading fontSize={"3xl"}>Let's stay in touch!</Heading>
-            <Text color={"gray.600"} fontSize={"xl"} px={4}>
-              {profile.contact}
+            <Text color={"gray.600"} fontSize={"xl"} px={4} textAlign={"left"}>
+              I'm currently seeking opportunities in software engineering roles
+              where I can develop innovative software solutions. I am
+              particularly interested in working on AI/ML products. Please feel
+              free to contact me if there are any available roles!
             </Text>
-            <Text color={`${color}.500`} fontWeight={600} fontSize={"lg"} px={4}>
-              {profile.email}
+            <Text
+              color={`${color}.500`}
+              fontWeight={600}
+              fontSize={"lg"}
+              px={4}
+            >
+              philippeyong927@gmail.com
             </Text>
             <Center>
               <HStack pt={4} spacing={4}>
@@ -61,4 +82,3 @@ export default function Contact({ color }) {
     </>
   );
 }
-

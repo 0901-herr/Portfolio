@@ -29,13 +29,13 @@ export default function Experience({ color }) {
   const experience = ExperienceArray();
   const options = TagsArray("ExperienceTags");
   const [selected, setSelected] = useState("");
-
+  console.log("experience:", experience);
   useEffect(() => {
     if (options.length > 0) {
       setSelected(options[0].value);
     }
   }, [options]);
-  
+
   const handleSelected = (value) => {
     setSelected(value);
   };
