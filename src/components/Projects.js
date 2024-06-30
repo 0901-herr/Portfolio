@@ -6,15 +6,15 @@ import {
   Box,
   HStack,
   Button,
-  ButtonGroup,
+  // ButtonGroup,
   Card,
   CardBody,
   Image,
   Heading,
-  SimpleGrid,
+  // SimpleGrid,
   Badge,
-  Link,
-  Center,
+  // Link,
+  // Center,
 } from "@chakra-ui/react";
 import { Fade } from "react-reveal";
 import { useState } from "react";
