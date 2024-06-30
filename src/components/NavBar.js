@@ -15,7 +15,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { useState } from "react";
+// import { useState } from "react";
 import ProfileArray from "./ProfileArray";
 const TbIcons = require("react-icons/tb");
 
@@ -33,7 +33,7 @@ export default function Nav({ color }) {
     teal: "#319795",
     yellow: "#D69E2E",
   };
-  const [scroll, setScroll] = useState(false);
+  // const [scroll, setScroll] = useState(false);
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -58,12 +58,12 @@ export default function Nav({ color }) {
     const contactSection = document.querySelector("#contact");
     contactSection.scrollIntoView({ behavior: "smooth" });
   };
-  const changeScroll = () =>
-    document.body.scrollTop > 80 || document.documentElement.scrollTop > 80
-      ? setScroll(true)
-      : setScroll(false);
+  // const changeScroll = () =>
+  //   document.body.scrollTop > 80 || document.documentElement.scrollTop > 80
+  //     ? setScroll(true)
+  //     : setScroll(false);
 
-  window.addEventListener("scroll", changeScroll);
+  // window.addEventListener("scroll", changeScroll);
 
   const TbLetterComponents = [];
 
