@@ -17,10 +17,10 @@ import {
   // Center,
 } from "@chakra-ui/react";
 import { Fade } from "react-reveal";
-import { useState } from "react";
+// import { useState } from "react";
 // import ProjectsArray from "./ProjectsArray";
 // import OtherProjectsArray from "./OtherProjectsArray";
-import TagsArray from "./TagsArray";
+// import TagsArray from "./TagsArray";
 
 const ProjectsArray = () => {
   return [
@@ -123,51 +123,51 @@ const ProjectsArray = () => {
   ];
 };
 
-const OtherProjectsArray = () => {
-  return [
-    {
-      name: "Impr — A Web App",
-      description:
-        "A web application for organizing personal reviews on articles/books etc. Application designed using Figma. Developed using the MERN stack (MongoDB, Express.js, React, Node.js). Equipped app with data refreshing and dark mode capability using Redux.",
-      buttons: [
-        { text: "GitHub", href: "https://github.com/YOUR_GITHUB/impr" }, // Replace with actual GitHub link if available
-      ],
-      badges: [
-        { text: "MongoDB", colorScheme: "green" },
-        { text: "Express.js", colorScheme: "teal" },
-        { text: "React.js", colorScheme: "blue" },
-        { text: "Node.js", colorScheme: "orange" },
-        { text: "Redux", colorScheme: "red" },
-        { text: "Figma", colorScheme: "yellow" },
-      ],
-      tags: ["Web App"],
-    },
-    {
-      name: "SpaceX App — A React Native Mobile App",
-      description:
-        "A SpaceX App that could be used to view different SpaceX rockets. Equipped with a search, filter, and pagination capability. Built with React Native and SpaceX GraphQL API.",
-      buttons: [
-        { text: "GitHub", href: "https://github.com/YOUR_GITHUB/spacex-app" }, // Replace with actual GitHub link if available
-      ],
-      badges: [
-        { text: "React Native", colorScheme: "blue" },
-        { text: "GraphQL", colorScheme: "pink" },
-      ],
-      tags: ["Mobile App"],
-    },
-  ];
-};
+// const OtherProjectsArray = () => {
+//   return [
+//     {
+//       name: "Impr — A Web App",
+//       description:
+//         "A web application for organizing personal reviews on articles/books etc. Application designed using Figma. Developed using the MERN stack (MongoDB, Express.js, React, Node.js). Equipped app with data refreshing and dark mode capability using Redux.",
+//       buttons: [
+//         { text: "GitHub", href: "https://github.com/YOUR_GITHUB/impr" }, // Replace with actual GitHub link if available
+//       ],
+//       badges: [
+//         { text: "MongoDB", colorScheme: "green" },
+//         { text: "Express.js", colorScheme: "teal" },
+//         { text: "React.js", colorScheme: "blue" },
+//         { text: "Node.js", colorScheme: "orange" },
+//         { text: "Redux", colorScheme: "red" },
+//         { text: "Figma", colorScheme: "yellow" },
+//       ],
+//       tags: ["Web App"],
+//     },
+//     {
+//       name: "SpaceX App — A React Native Mobile App",
+//       description:
+//         "A SpaceX App that could be used to view different SpaceX rockets. Equipped with a search, filter, and pagination capability. Built with React Native and SpaceX GraphQL API.",
+//       buttons: [
+//         { text: "GitHub", href: "https://github.com/YOUR_GITHUB/spacex-app" }, // Replace with actual GitHub link if available
+//       ],
+//       badges: [
+//         { text: "React Native", colorScheme: "blue" },
+//         { text: "GraphQL", colorScheme: "pink" },
+//       ],
+//       tags: ["Mobile App"],
+//     },
+//   ];
+// };
 
 export default function Projects({ color }) {
   const projects = ProjectsArray();
-  const others = OtherProjectsArray();
-  const options = TagsArray("ProjectsTags");
+  // const others = OtherProjectsArray();
+  // const options = TagsArray("ProjectsTags");
 
-  const [selected, setSelected] = useState("All");
+  // const [selected, setSelected] = useState("All");
 
-  const handleSelected = (value) => {
-    setSelected(value);
-  };
+  // const handleSelected = (value) => {
+  //   setSelected(value);
+  // };
 
   return (
     <>
