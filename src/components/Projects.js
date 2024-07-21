@@ -6,21 +6,13 @@ import {
   Box,
   HStack,
   Button,
-  // ButtonGroup,
   Card,
   CardBody,
   Image,
   Heading,
-  // SimpleGrid,
   Badge,
-  // Link,
-  // Center,
 } from "@chakra-ui/react";
 import { Fade } from "react-reveal";
-import { useState } from "react";
-// import ProjectsArray from "./ProjectsArray";
-// import OtherProjectsArray from "./OtherProjectsArray";
-import TagsArray from "./TagsArray";
 
 const ProjectsArray = () => {
   return [
@@ -30,7 +22,7 @@ const ProjectsArray = () => {
       description:
         "Mountain is the first application I ever built, an iOS app designed for task planning and time tracking. After following countless tutorials, I finally completed the app and made it live on the App Store. Developed using Swift and SwiftUI, with the design created in Figma, the app has achieved over 300 global downloads.",
       buttons: [
-        // { text: "App Store", href: "https://apps.apple.com/app/idYOUR_APP_ID" }, // Replace with actual App Store link if available
+        { text: "GitHub", href: "https://github.com/0901-herr/MountainApp/" },
       ],
       badges: [
         { text: "Swift", colorScheme: "blue" },
@@ -39,8 +31,20 @@ const ProjectsArray = () => {
       ],
     },
     {
+      name: "LLto",
+      image: "/LLto_ui.png",
+      description:
+        "LLto is an MVP I built for a fintech startup hackathon, where we won 1st place. It’s a P2P microloan platform for gig workers that I used in live pitches and demos, receiving great feedback on the UI design and functionality.",
+      buttons: [{ text: "GitHub", href: "https://github.com/0901-herr/llto" }],
+      badges: [
+        { text: "Firebase", colorScheme: "green" },
+        { text: "ReactNative", colorScheme: "blue" },
+        { text: "Tailwind", colorScheme: "purple" },
+      ],
+    },
+    {
       name: "TaskDo - Time Tracker iOS Mobile App",
-      image: "/taskdo.png", // Replace with actual image URL if available
+      image: "/taskdo.png",
       description:
         "Following the release of Mountain, I wanted to challenge myself by building a more complex application that includes backend operations. TaskDo is a well-rounded task and time manager inspired by a minimalistic design approach. Developed using Swift and SwiftUI, it employs the MVVM architecture and features a custom database schema. Firebase is used for the login system and data storage, and push notifications are integrated for task tracking.",
       buttons: [
@@ -57,7 +61,7 @@ const ProjectsArray = () => {
     },
     {
       name: "Flickr Web App",
-      image: "/flickr.png", // Replace with actual image URL if available
+      image: "/flickr.png",
       description:
         "FlicrApp is a web application built using the MERN stack, featuring image search capabilities via the Flickr API. During its development, I adhered to best practices and architectural design principles. The app includes RESTful APIs for interaction with the Flickr API, follows the MVC design pattern, and features an authentication system developed with MongoDB and managed using Redux.",
       buttons: [
@@ -123,51 +127,8 @@ const ProjectsArray = () => {
   ];
 };
 
-const OtherProjectsArray = () => {
-  return [
-    {
-      name: "Impr — A Web App",
-      description:
-        "A web application for organizing personal reviews on articles/books etc. Application designed using Figma. Developed using the MERN stack (MongoDB, Express.js, React, Node.js). Equipped app with data refreshing and dark mode capability using Redux.",
-      buttons: [
-        { text: "GitHub", href: "https://github.com/YOUR_GITHUB/impr" }, // Replace with actual GitHub link if available
-      ],
-      badges: [
-        { text: "MongoDB", colorScheme: "green" },
-        { text: "Express.js", colorScheme: "teal" },
-        { text: "React.js", colorScheme: "blue" },
-        { text: "Node.js", colorScheme: "orange" },
-        { text: "Redux", colorScheme: "red" },
-        { text: "Figma", colorScheme: "yellow" },
-      ],
-      tags: ["Web App"],
-    },
-    {
-      name: "SpaceX App — A React Native Mobile App",
-      description:
-        "A SpaceX App that could be used to view different SpaceX rockets. Equipped with a search, filter, and pagination capability. Built with React Native and SpaceX GraphQL API.",
-      buttons: [
-        { text: "GitHub", href: "https://github.com/YOUR_GITHUB/spacex-app" }, // Replace with actual GitHub link if available
-      ],
-      badges: [
-        { text: "React Native", colorScheme: "blue" },
-        { text: "GraphQL", colorScheme: "pink" },
-      ],
-      tags: ["Mobile App"],
-    },
-  ];
-};
-
 export default function Projects({ color }) {
   const projects = ProjectsArray();
-  const others = OtherProjectsArray();
-  const options = TagsArray("ProjectsTags");
-
-  const [selected, setSelected] = useState("All");
-
-  const handleSelected = (value) => {
-    setSelected(value);
-  };
 
   return (
     <>
@@ -229,75 +190,6 @@ export default function Projects({ color }) {
               </Fade>
             ))}
           </Stack>
-          {/* <Text color={"gray.600"} fontSize={"xl"} px={4}>
-            Other Projects
-          </Text>
-          <Center px={4}>
-            <ButtonGroup variant="outline">
-              <Button
-                colorScheme={selected === "All" ? `${color}` : "gray"}
-                onClick={() => handleSelected("All")}
-              >
-                All
-              </Button>
-              {options.map((option) => (
-                <Button
-                  colorScheme={selected === option.value ? `${color}` : "gray"}
-                  onClick={() => handleSelected(option.value)}
-                >
-                  {option.value}
-                </Button>
-              ))}
-            </ButtonGroup>
-          </Center> */}
-          {/* <SimpleGrid columns={[1, 2, 3]} px={4} spacing={4}>
-            {others
-              .filter((other) => {
-                if (selected === "All") {
-                  return true;
-                } else {
-                  return other.tags.includes(selected);
-                }
-              })
-              .map((other) => (
-                <Fade bottom>
-                  <Card key={other.name}>
-                    <Stack>
-                      <CardBody align="left" h={[null, "40vh"]}>
-                        <Heading size="sm">{other.name}</Heading>
-
-                        <Text fontSize="sm" py={2}>
-                          {other.description}
-                        </Text>
-
-                        <HStack spacing={2}>
-                          {other.buttons.map((button) => (
-                            <Link
-                              key={button.text}
-                              href={button.href}
-                              color={`${color}.400`}
-                            >
-                              {button.text}
-                            </Link>
-                          ))}
-                        </HStack>
-                        <HStack flexWrap="wrap" pt={4} spacing={2}>
-                          {other.badges.map((badge) => (
-                            <Badge
-                              my={2}
-                              key={badge.text}
-                              colorScheme={badge.colorScheme}
-                            >
-                              {badge.text}
-                            </Badge>
-                          ))}
-                        </HStack>
-                      </CardBody>
-                    </Stack>
-                  </Card>
-                </Fade>
-              ))}
-          </SimpleGrid> */}
         </Stack>
       </Container>
     </>

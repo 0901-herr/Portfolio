@@ -27,10 +27,10 @@ export default function About({ color }) {
             team, currently pursuing a Master's in Artificial Intelligence. I
             graduated from Monash University with a Bachelor's degree in
             Computer Science and have developed a strong interest in software
-            development. With 1 year of experience in Full-Stack development for
-            Web and Mobile Applications, gained through professional roles and
-            internships, I am eager to expand my knowledge and collaborate on
-            innovative ideas.
+            development. With 1.5 years of experience in Full-Stack development
+            for Web and Mobile Applications, gained through professional roles
+            and internships, I am eager to expand my knowledge and collaborate
+            on innovative ideas.
             <br />
             <br />I first discovered the magic of creating something by putting
             together LEGO blocks and have followed that path ever since.
