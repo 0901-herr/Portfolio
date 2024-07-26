@@ -35,7 +35,10 @@ const ProjectsArray = () => {
       image: "/LLto_ui.png",
       description:
         "LLto is an MVP I built for a fintech startup hackathon, where we won 1st place. It’s a P2P microloan platform for gig workers that I used in live pitches and demos, receiving great feedback on the UI design and functionality.",
-      buttons: [{ text: "GitHub", href: "https://github.com/0901-herr/llto" }],
+      buttons: [
+        { text: "DevPost", href: "https://devpost.com/software/llto" },
+        { text: "GitHub", href: "https://github.com/0901-herr/llto" },
+      ],
       badges: [
         { text: "Firebase", colorScheme: "green" },
         { text: "ReactNative", colorScheme: "blue" },
